@@ -10,7 +10,7 @@ class Config(object):
 
     SQLALCHEMY_DATABASE_URI = 'sqlite:///dev.db'
 
-    APPLICATION_ROOT = 'http://1cf55a5a.ngrok.com'
+    APPLICATION_ROOT = 'http://41850dda.ngrok.com'
 
     TW_CLIENT = twilio.rest.TwilioRestClient(
         os.environ.get('TWILIO_DEV_ACCOUNT_SID'),
@@ -30,7 +30,7 @@ class Config(object):
     # number of threads to limit asynchronous leaderboard requests
     FFTF_LB_ASYNC_POOL_SIZE = 8
 
-    SECRET_KEY = 'AOUSBDAONPSOMDASIDUBSDOUABER)*#(R&(&@@#))'
+    SECRET_KEY = 'ihazaseekrit'
 
 
 class ConfigProduction(Config):
@@ -39,7 +39,7 @@ class ConfigProduction(Config):
     SENTRY_DSN = os.environ.get('SENTRY_DSN')
 
     SQLALCHEMY_POOL_RECYCLE = 60 * 60  # 1 hour
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
     APPLICATION_ROOT = os.environ.get('APPLICATION_ROOT')
 
