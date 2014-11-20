@@ -19,7 +19,8 @@ from flask_jsonpify import jsonify
 from raven.contrib.flask import Sentry
 from twilio import TwilioRestException
 
-from models import db, aggregate_stats, log_call, call_count
+from database import db
+from models import aggregate_stats, log_call, call_count
 from political_data import PoliticalData
 from cache_handler import CacheHandler
 from fftf_leaderboard import FFTFLeaderboard

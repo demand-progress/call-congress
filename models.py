@@ -1,32 +1,30 @@
 import hashlib
 import logging
-
 from datetime import datetime
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import func, Column, Integer, String, DateTime
-from sqlalchemy.exc import SQLAlchemyError
 
-db = SQLAlchemy()
+# from sqlalchemy import func, Column, Integer, String, DateTime
+from database import db
+from sqlalchemy.exc import SQLAlchemyError
 
 
 class Call(db.Model):
     __tablename__ = 'calls'
 
-    id = Column(Integer, primary_key=True)
-    timestamp = Column(DateTime)
-    campaign_id = Column(String(32))
-    member_id = Column(String(10))  # congress member sunlight identifier
+    id = db.Column(db.Integer, primary_key=True)
+    timestamp = db.Column(db.DateTime)
+    campaign_id = db.Column(db.String(32))
+    member_id = db.Column(db.String(10))  # congress member sunlight identifier
 
     # user attributes
-    user_id = Column(String(64))    # hashed phone number
-    zipcode = Column(String(5))
-    areacode = Column(String(3))    # first 3 digits of phone number
-    exchange = Column(String(3))    # next 3 digits of phone number
+    user_id = db.Column(db.String(64))    # hashed phone number
+    zipcode = db.Column(db.String(5))
+    areacode = db.Column(db.String(3))    # first 3 digits of phone number
+    exchange = db.Column(db.String(3))    # next 3 digits of phone number
 
     # twilio attributes
-    call_id = Column(String(40))    # twilio call ID
-    status = Column(String(25))     # twilio call status
-    duration = Column(Integer)      # twilio call time in seconds
+    call_id = db.Column(db.String(40))    # twilio call ID
+    status = db.Column(db.String(25))     # twilio call status
+    duration = db.Column(db.Integer)      # twilio call time in seconds
 
     @classmethod
     def hash_phone(cls, number):
@@ -103,3 +101,29 @@ def aggregate_stats(campaign_id):
             'reps': dict(tuple(r) for r in reps)
         }
     }
+
+if __name__=="__main__":
+    import socket
+    from flask import Flask
+    from flask_sqlalchemy import SQLAlchemy
+
+    app = Flask('app')
+    if '.local' in socket.gethostname():
+        app.config.from_object('config.Config')
+        print "local config",
+    else:
+        app.config.from_object('config.ConfigProduction')
+        print "production config",
+    db = SQLAlchemy(app)
+
+    ok = raw_input("[ok] to proceed? ")
+    if ok == 'ok':
+        with app.app_context():
+            db.create_all()
+        
+        c = Call('test','test')
+        db.session.add(c)
+        db.session.commit()
+        print "done"
+    else:
+        print "abort"
