@@ -23,9 +23,9 @@
     - 978-948-4021
   target_house: false
   target_senate: false
-  msg_intro: http://callongoogle.s3.amazonaws.com/audio/nn_intro.mp3
-  msg_intro_confirm: http://callongoogle.s3.amazonaws.com/audio/nn_prompt.mp3
-  msg_call_block_intro: http://callongoogle.s3.amazonaws.com/audio/nn_connecting.mp3
+  msg_intro: Welcome to the test phone call.
+  msg_intro_confirm: Now we'll play an introduction
+  msg_call_block_intro: We need you to make this call right now!
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: Thank you!
   msg_opt_out: http://callongoogle.s3.amazonaws.com/audio/nn_opt_out.mp3
