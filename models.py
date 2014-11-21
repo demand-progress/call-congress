@@ -114,6 +114,7 @@ if __name__=="__main__":
         app.config.from_object('config.ConfigProduction')
         print "production config",
     db = SQLAlchemy(app)
+    print db
 
     ok = raw_input("[ok] to proceed? ")
     if ok == 'ok':
