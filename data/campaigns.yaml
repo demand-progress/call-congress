@@ -24,7 +24,7 @@
   target_house: false
   target_senate: false
   msg_intro: Welcome to the test phone call.
-  msg_intro_confirm: Now we'll play an introduction
+  msg_intro_confirm: Press 1 to continue, or 9 to quit.
   msg_call_block_intro: We need you to make this call right now!
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: Thank you!
