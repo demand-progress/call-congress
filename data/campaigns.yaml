@@ -23,13 +23,12 @@
     - 978-948-4021
   target_house: false
   target_senate: false
-  msg_intro: Welcome to the test phone call.
-  msg_intro_confirm: Press 1 to continue, or 9 to quit.
-  msg_call_block_intro: We need you to make this call right now!
+  msg_intro: Hi, welcome to CallOnGoogle.net. This is your daily call to remind you to ask Google to publicly come out in strong support of net neutrality.
+  msg_intro_confirm: To talk to another Google employee, press star now. To cancel and stop receiving these calls, press nine.
+  msg_call_block_intro: All right, we’re connecting you to Google now. When they answer, tell them you’re calling because we need Google to fight to protect net neutrality as strongly as Comcast opposes it and come out publicly in support of FCC reclassification under Title 2. Then, make sure to share CallOnGoogle.net, we need more daily callers like you.
   msg_rep_intro: Now connecting you to {{name}}, {{office}}.
   msg_final_thanks: Thank you!
-  msg_opt_out: Ok, we\'ll stop calling you. If you change your mind, you can sign up again at callongoogle.net. Thanks for everything you\'ve done!
-  #press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
+  msg_opt_out: Ok, we'll stop calling you. If you change your mind, you can sign up again at CallOnGoogle.net. Thanks for everything you've done!
   call_human_check: false
   extra_first_calls:
     - name: Kent Walker
