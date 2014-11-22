@@ -32,6 +32,132 @@
   #press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
   call_human_check: false
   extra_first_calls:
-    - name: Executive Name
-      number: 123-456-7890
-      office: Google
+    - name: Kent Walker
+      number: 650-253-8747
+      office: Senior Vice President and General Counsel
+    - name: David Drummond
+      number: 650-253-4350
+      office: Senior Vice President, Corporate Development and Chief Legal Officer
+    - name: Amit Singhal
+      number: 650-253-4206
+      office: Senior Vice President and Google Fellow
+    - name: Don Harrison
+      number: 650-253-6646
+      office: Deputy General Counsel
+    - name: Christopher Chin
+      number: 650-253-4454
+      office: Deputy General Counsel
+    - name: Matt Sucherman
+      number: 650-253-5411
+      office: Deputy General Counsel & VP
+    - name: Andy Hinton
+      number: 650-253-8361
+      office: Chief Compliance Officer & VP
+    - name: Beth Martin
+      number: 650-253-8038
+      office: Senior Counsel
+    - name: Halmiah Prado
+      number: 650-253-8205
+      office: Senior Director, Legal
+    - name: Lance Kavanaugh
+      number: 650-253-3222
+      office: Director, Legal, Youtube
+    - name: Catherine Lacavera
+      number: 650-253-1678
+      office: Director, Litigation
+    - name: David Sobota
+      number: 650-253-4000
+      office: Director, Corporate Development
+    - name: Richard Holden
+      number: 650-253-4468
+      office: Director, Product Management
+    - name: Jennifer Nam
+      number: 650-253-2410
+      office: Senior Counsel
+    - name: Shana Stanton
+      number: 650-253-1037
+      office: Senior Litigation Counsel
+    - name: Jenn Blackstone
+      number: 650-253-3640
+      office: Senior Counsel
+    - name: Doug Hudson
+      number: 650-253-5000
+      office: Senior Counsel
+    - name: Joe Faber
+      number: 650-253-4952
+      office: Senior Counsel
+    - name: Carola Vasquez
+      number: 650-253-7506
+      office: Senior Counsel
+    - name: Paul Twarog
+      number: 650-209-0261
+      office: Senior Counsel
+    - name: Sallie Lim
+      number: 650-253-3638
+      office: Senior Corporate Counsel
+    - name: Ben Gomes
+      number: 650-253-4056
+      office: Vice President, Engineering
+    - name: Masumi Reynders
+      number: 650-253-5773
+      office: Vice President, Software Procurement & Global Partnerships, Motorola Mobility
+    - name: Dave Radcliffe
+      number: 650-253-3218
+      office: Vice President, Real Estate
+    - name: Jonathan Dale
+      number: 415-203-9865
+      office: Senior Partner Technology Manager
+    - name: Joe Kraus
+      number: 650-253-8339
+      office: Partner, Google Ventures
+    - name: Jeff Walz
+      number: 650 253 2784
+      office: Director of University Relations
+    - name: Anne Aula
+      number: 650-253-8975
+      office: UX Lead
+    - name: Jay Ching
+      number: 650-539-9389
+      office: Account Manager, Google TV Ads
+    - name: Ken Motoyama
+      number: 650-253-8364
+      office: Manager
+    - name: Sara McKinley
+      number: 650-215-8912
+      office: Product Manager
+    - name: Stephen Fang
+      number: 650-253-5439
+      office: University Google Apps
+    - name: Becky  Evans
+      number: 650-253-6934
+      office: K-12 Google Apps
+    - name: Jake Chin
+      number: 650 253 0297
+      office: Manager, Global Negotiations Team
+    - name: Eric Raymond
+      number: 650-253-3320
+      office: Communications Manager, Sustainability
+    - name: Mark Nelson
+      number: 650-253-3411
+      office: Strategic Partner Manager
+    - name: Vinesh Rathore
+      number: 650-253-5953
+      office: Product Counsel
+    - name: Anthony Ravitz
+      number: 650-253-0676
+      office: Green Team Lead
+    - name: Erin Marsteller Hawthornthwaite
+      number: 650-253-4973
+      office: IP Lawyer
+    - name: John Colgan
+      number: 650-253-5411
+      office: Corporate Counsel
+    - name: Leo Lipsztein
+      number: 650-253-3662
+      office: Product Counsel
+    - name: Neil Dave
+      number: 650-253-5637
+      office: Program Manager, Retail Operations & Strategy
+    - name: Dan Miller
+      number: 650-253-4449
+      office: Patent Litigation Counsel
