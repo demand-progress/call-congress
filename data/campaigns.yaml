@@ -23,9 +23,9 @@
     - 978-948-4021
   target_house: false
   target_senate: false
-  msg_intro: Hi, welcome to CallOnGoogle.net. This is your daily call to remind you to ask Google to publicly come out in strong support of net neutrality.
-  msg_intro_confirm: To talk to another Google employee, press star now. To cancel and stop receiving these calls, press nine.
-  msg_call_block_intro: All right, we’re connecting you to Google now. When they answer, tell them you’re calling because we need Google to fight to protect net neutrality as strongly as Comcast opposes it and come out publicly in support of FCC reclassification under Title 2. Then, make sure to share CallOnGoogle.net, we need more daily callers like you.
+  msg_intro: Hi, welcome to Call On Google.net. We need you to ask Google to publicly come out in strong support of net neutrality.
+  msg_intro_confirm: To talk to a Google employee, press star now. To cancel and stop receiving these calls, press nine.
+  msg_call_block_intro: All right, we will connect you to a Google executive now. When they answer, tell them you are calling because we need Google to fight to protect net neutrality as strongly as Comcast opposes it. Then, make sure to share Call On Google.net. We need more daily callers like you!
   msg_rep_intro: Now connecting you to {{name}}, {{office}}.
   msg_final_thanks: Thank you!
   msg_opt_out: Ok, we'll stop calling you. If you change your mind, you can sign up again at CallOnGoogle.net. Thanks for everything you've done!
