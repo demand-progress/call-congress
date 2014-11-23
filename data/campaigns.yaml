@@ -20,7 +20,11 @@
 
 - id: google-nn
   numbers:
-    - 978-948-4021
+    - 650-204-3239
+    - 650-204-8048
+    - 650-204-8939
+    - 650-204-3749
+    - 650-204-8925
   target_house: false
   target_senate: false
   msg_intro: Hi, welcome to Call On Google.net. We need you to ask Google to publicly come out in strong support of net neutrality.
