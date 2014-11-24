@@ -119,6 +119,60 @@
     - name: Anne Aula
       number: 650-253-8975
       office: UX Lead
+    - name: Austin Schlick
+      number: 202-346-1210
+      office: Director, Communications Law
+    - name: Darah Franklin
+      number: 202-346-1347
+      office: Policy Counsel
+    - name: Samantha Smith
+      number: 202-346-1375
+      office: Global Communications & Public Affairs
+    - name: Stewart Jeffries
+      number: 202-681-0796
+      office: Public Policy & Government Relations Senior Counsel
+    - name: Aparna Sridhar
+      number: 202-346-1261
+      office: Policy Counsel
+    - name: Adrienne Biddings
+      number: 202-346-1259
+      office: Policy Counsel
+    - name: Frannie LaSala
+      number: 202-346-1245
+      office: Senior Policy Manager
+    - name: Kevin Yingling
+      number: 202-346-1282 
+      office: Senior Competition Counsel
+    - name: Megan Stull
+      number: 202-346-1208
+      office: Corporate Counsel
+    - name: Travis Mason
+      number: 202-346-1214
+      office: Public Policy & Government Relations
+    - name: John Burchett
+      number: "-202-346-1269"
+      office: State Policy Counsel
+    - name: Will Devries
+      number: 202-346-1227
+      office: Privacy Counsel
+    - name: Lee Dunn
+      number: 202-346-1228
+      office: Lobbyist
+    - name: Jennifer Bernal
+      number: 202-346-1233
+      office: Lobbyist
+    - name: Adam Kovacevich
+      number: 202-346-1298
+      office: Director, Public Policy
+    - name: Melissa Nitti
+      number: "-202-346-1225"
+      office: Spokesperson
+    - name: Sarah Falvey
+      number: 202 346 1230
+      office: Policy Manager
+    - name: Heather West
+      number: 202-643-6381
+      office: Security and Privacy - Public Policy
     - name: Jay Ching
       number: 650-539-9389
       office: Account Manager, Google TV Ads
@@ -135,7 +189,7 @@
       number: 650-253-6934
       office: K-12 Google Apps
     - name: Jake Chin
-      number: 650 253 0297
+      number: 650-253-0297
       office: Manager, Global Negotiations Team
     - name: Eric Raymond
       number: 650-253-3320
