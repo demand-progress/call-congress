@@ -6,6 +6,9 @@ class Throttle():
 
     def __init__(self):
 
+        if not os.environ.get('MOTHERSHIP_POSTGRES_DB'):
+            raise ImportError('unable to connect to mothership')
+            
         db   = os.environ.get('MOTHERSHIP_POSTGRES_DB')
         user = os.environ.get('MOTHERSHIP_POSTGRES_USER')
         pswd = os.environ.get('MOTHERSHIP_POSTGRES_PASS')
