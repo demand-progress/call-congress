@@ -381,8 +381,9 @@ def make_single_call():
         special = json.loads(params['repIds'][i].replace("SPECIAL_CALL_", ""))
         to_phone = special['number']
         full_name = special['name']
+        office = special['office']
         play_or_say(resp, campaign.get('msg_special_call_intro',
-            campaign['msg_rep_intro']), name=full_name)
+            campaign['msg_rep_intro']), name=full_name, office=office)
 
     else:
 
@@ -396,7 +397,7 @@ def make_single_call():
         if 'voted_with_list' in campaign and \
                 params['repIds'][i] in campaign['voted_with_list']:
             play_or_say(
-                resp, campaign['msg_repo_intro_voted_with'], name=full_name)
+                resp, campaign['msg_repo_intro_voted_with'], name=full_name, office=office)
         else:
             play_or_say(resp, campaign['msg_rep_intro'], name=full_name, office=office)
 
