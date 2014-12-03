@@ -34,6 +34,7 @@
   msg_final_thanks: Thank you!
   msg_opt_out: Ok, we'll stop calling you. If you change your mind, you can sign up again at CallOnGoogle.net. Thanks for everything you've done!
   call_human_check: false
+  infinite_loop: true
   extra_first_calls:
     - name: Kent Walker
       number: 650-253-8747
