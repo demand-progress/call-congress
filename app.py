@@ -442,6 +442,9 @@ def call_complete():
         params['zipcode'] = params['saved_zipcode']
         del params['saved_zipcode']
         del params['repIds']
+        
+        play_or_say(resp, campaign['msg_between_thanks'])
+
         resp.redirect(url_for('make_single_call', **params))
 
     elif i == len(params['repIds']) - 1:
