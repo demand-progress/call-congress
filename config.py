@@ -32,6 +32,9 @@ class Config(object):
 
     SECRET_KEY = 'ihazaseekrit'
 
+    # only used for FFTF extra call data logging
+    FFTF_CALL_LOG_API_KEY = os.environ.get('FFTF_CALL_LOG_API_KEY')
+
 
 class ConfigProduction(Config):
     DEBUG = strtobool(os.environ.get('DEBUG', 'false'))
