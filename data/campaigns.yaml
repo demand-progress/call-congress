@@ -27,9 +27,9 @@
     - 650-204-8925
   target_house: false
   target_senate: false
-  msg_intro: Hi, welcome to Call On Google.net. We need you to ask Google to publicly come out in strong support of net neutrality.
-  msg_intro_confirm: To talk to a Google employee, press star now.
-  msg_call_block_intro: All right, we will connect you to a Google executive. When they answer, tell them you are calling because we need Google to fight to protect net neutrality. Then, make sure to share Call On Google.net. We need more callers like you!
+  msg_intro: http://www.callongoogle.net/audio/msg_intro.mp3
+  msg_intro_confirm: http://www.callongoogle.net/audio/msg_intro_confirm.mp3
+  msg_call_block_intro: http://www.callongoogle.net/audio/msg_call_block_intro.mp3
   msg_rep_intro: Now connecting you to {{name}}, {{office}}.
   msg_between_thanks: Connecting you to the next number.
   msg_final_thanks: Thank you!
