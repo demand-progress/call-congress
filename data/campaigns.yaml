@@ -189,9 +189,9 @@
     - name: Sarah Falvey
       number: 202 346 1230
       office: Policy Manager
-    - name: Heather West
-      number: 202-643-6381
-      office: Security and Privacy - Public Policy
+    # - name: Heather West
+    #   number: 202-643-6381
+    #   office: Security and Privacy - Public Policy
     - name: Jay Ching
       number: 650-539-9389
       office: Account Manager, Google TV Ads
