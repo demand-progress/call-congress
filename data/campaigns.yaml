@@ -105,9 +105,9 @@
     - name: Doug Hudson
       number: 650-253-5000
       office: Senior Counsel
-    - name: Joe Faber
-      number: 650-253-4952
-      office: Senior Counsel
+    # - name: Joe Faber
+    #   number: 650-253-4952
+    #   office: Senior Counsel
     - name: Carola Vasquez
       number: 650-253-7506
       office: Senior Counsel
