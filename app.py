@@ -392,14 +392,15 @@ def make_single_call():
         to_phone = member['phone']
         full_name = unicode("{} {}".format(
             member['firstname'], member['lastname']), 'utf8')
-        office = member['office']
+        title = member['title']
+        state = member['state']
 
         if 'voted_with_list' in campaign and \
                 params['repIds'][i] in campaign['voted_with_list']:
             play_or_say(
-                resp, campaign['msg_repo_intro_voted_with'], name=full_name, office=office)
+                resp, campaign['msg_rep_intro_voted_with'], name=full_name, title=title, state=state)
         else:
-            play_or_say(resp, campaign['msg_rep_intro'], name=full_name, office=office)
+            play_or_say(resp, campaign['msg_rep_intro'], name=full_name, title=title, state=state)
 
     if campaign.get('fftf_log_extra_data'):
         leaderboard.log_extra_data(params, campaign, request, to_phone, i)
