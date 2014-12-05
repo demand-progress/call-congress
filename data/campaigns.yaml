@@ -18,6 +18,23 @@
   msg_press_1: You pressed 1 at the prompt to do something assuming a callback URL was defined.
   msg_opt_out: Sorry to see you go.
 
+- id: republicans-love-comcast
+  numbers:
+    - 571-414-0090
+  repIds:
+    [U000031, T000250, W000791, W000437, B000575, R000595, A000368, H001041, C000542, S001184, C001098, F000463, J000293, B000213, B001243, L000566, H000067, W000413, S000364, P000373, T000459, R000575, M001151, B001248, G000550, S001176, M001159, M001159, L000567, C001075, G000558, O000168, M001180, G000562, P000602, K000378, G000568, B001257, J000292, L000576, E000291]
+  randomize_order: true
+  target_house: false
+  target_senate: false
+  msg_intro: Hi, welcome to Republicans Love Comcast.com
+  msg_intro_confirm: We'll connect you with a Republican legislator now.
+  msg_call_block_intro: Ask Republican legislators to support strong Net Neutrality rules under Title II of the Telecommunications Act.  
+  msg_rep_intro: Now connecting you to {{title}} {{name}}, {{state}}.
+  msg_between_thanks: Connecting you to the next legislator.
+  msg_final_thanks: Thank you!
+  msg_opt_out: Ok, we'll stop calling you. If you change your mind, you can sign up again at Republicans Love Comcast.com. Thanks for everything you've done!
+  call_human_check: false
+
 - id: google-nn
   numbers:
     - 650-204-3239
