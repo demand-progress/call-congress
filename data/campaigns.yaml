@@ -142,9 +142,9 @@
     - name: Anne Aula
       number: 650-253-8975
       office: UX Lead
-    - name: Austin Schlick
-      number: 202-346-1210
-      office: Director, Communications Law
+    # - name: Austin Schlick
+    #   number: 202-346-1210
+    #   office: Director, Communications Law
     - name: Darah Franklin
       number: 202-346-1347
       office: Policy Counsel
