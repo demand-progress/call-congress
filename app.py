@@ -111,7 +111,7 @@ def parse_params(r):
             params['repIds'] = campaign['repIds']
 
         if campaign.get('randomize_order', False):
-            random.shuffle(member_ids)
+            random.shuffle(params['repIds'])
 
     if params['userPhone']:
         params['userPhone'] = params['userPhone'].replace('-', '')
