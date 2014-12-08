@@ -110,6 +110,9 @@ def parse_params(r):
         else:
             params['repIds'] = campaign['repIds']
 
+        if campaign.get('randomize_order', False):
+            random.shuffle(member_ids)
+
     if params['userPhone']:
         params['userPhone'] = params['userPhone'].replace('-', '')
 
@@ -134,7 +137,7 @@ def parse_params(r):
             params['ip_address'] = ips[0]
 
     if 'random_choice' in campaign:
-        # pick a random choice among a selected set of members
+        # pick a single random choice among a selected set of members
         params['repIds'] = [random.choice(campaign['random_choice'])]
 
     if app.debug:
