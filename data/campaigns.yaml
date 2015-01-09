@@ -39,6 +39,19 @@
   msg_opt_out: Ok, we'll stop calling you. If you change your mind, you can sign up again at These Republicans Love Comcast.com. Thanks for everything you've done!
   call_human_check: false
 
+- id: nn-senate-congress-fcc
+  target_house: true
+  target_senate: true
+  only_call_1_sen: true
+  only_call_1_rep: true
+  extra_last_call_name: FCC Chairman Wheeler
+  extra_last_call_num: 2024181000
+  randomize_order: true
+  msg_call_block_intro: It's crunch time, make a call to your Senator, Representative and FCC Chairman Wheeler.
+  msg_rep_intro: Now connecting you to {{title}} {{name}}, {{state}}.
+  msg_between_thanks: You're doing great - here's the next call.
+  msg_final_thanks: Thank you!
+
 - id: google-nn
   numbers:
     - 650-204-3239
