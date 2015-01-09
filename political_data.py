@@ -70,7 +70,7 @@ class PoliticalData():
 
         random.shuffle(senators)    # mix it up! always do this :)
 
-        if get_one:
+        if senators and get_one:
             return [random.choice(senators)]
         else:
             return senators
@@ -84,7 +84,7 @@ class PoliticalData():
                 and l['state'] in states
                 and l['district'] in district_numbers]
 
-        if get_one:
+        if reps and get_one:
             return [random.choice(reps)]
         else:
             return reps
@@ -128,16 +128,24 @@ class PoliticalData():
         if target_senate and not target_house_first:
             sens = [s['bioguide_id'] for s
                         in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
+            if self.debug_mode:
+                print "got %s sens" % sens
             member_ids.extend(sens)
 
         if target_house:
             reps = [h['bioguide_id'] for h
                        in self.get_house_members(local_districts, campaign.get('only_call_1_rep', False))]
+            if self.debug_mode:
+                print "got %s reps" % reps
             member_ids.extend(reps)
 
         if target_senate and target_house_first:
-            member_ids.extend([s['bioguide_id'] for s
-                       in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))])
+            sens = [s['bioguide_id'] for s
+                       in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
+            if self.debug_mode:
+                print "got %s sens" % sens
+            member_ids.extend(sens)
+
 
         if campaign.get('randomize_order', False):
             random.shuffle(member_ids)
