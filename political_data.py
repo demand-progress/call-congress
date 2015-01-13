@@ -184,6 +184,11 @@ class PoliticalData():
             first_call = format_special_call(first_call_name, first_call_number)
             member_ids.insert(0, first_call)
 
+        if campaign.get('extra_last_calls'):
+            lucky = random.choice(campaign.get('extra_last_calls'))
+            last_call = format_special_call(lucky['name'], lucky['number'], lucky['office'])
+            member_ids.extend(last_call)
+
         if campaign.get('extra_last_call_name') and \
                 campaign.get('extra_last_call_num'):
             last_call = format_special_call(
