@@ -159,16 +159,23 @@ class PoliticalData():
                             member_ids.remove(l['bioguide_id'])     # janky
                             member_ids.insert(0, l['bioguide_id'])  # lol
 
-        def format_special_call(name, number, office=''):
+
+        def format_special_call(name, number, office='', intro = None):
             return "SPECIAL_CALL_%s" % json.dumps({
-                'name': name, 'number': number, 'office': office})
+                'name': name, 'number': number, 'intro': intro, 
+                'office': office})
 
         # Finally, for some states we want to call a special name/number first.
         # We are going to shoehorn this data into the existing member_ids
         # paradigm and specially parse it. Super janky, but c'est la vie.
         if campaign.get('extra_first_calls'):
             lucky = random.choice(campaign.get('extra_first_calls'))
-            first_call = format_special_call(lucky['name'], lucky['number'], lucky['office'])
+            first_call = format_special_call(
+                lucky.get('name'),
+                lucky.get('number'),
+                lucky.get('office', ''),
+                lucky.get('intro', None)
+            )
             member_ids.insert(0, first_call)
 
 
@@ -183,6 +190,16 @@ class PoliticalData():
         if first_call_number and first_call_name:
             first_call = format_special_call(first_call_name, first_call_number)
             member_ids.insert(0, first_call)
+
+        if campaign.get('extra_last_calls'):
+            lucky = random.choice(campaign.get('extra_last_calls'))
+            last_call = ormat_special_call(
+                lucky.get('name'),
+                lucky.get('number'),
+                lucky.get('office', ''),
+                lucky.get('intro', None)
+            )
+            member_ids.extend(last_call)
 
         if campaign.get('extra_last_call_name') and \
                 campaign.get('extra_last_call_num'):
