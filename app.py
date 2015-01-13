@@ -25,6 +25,11 @@ from cache_handler import CacheHandler
 from fftf_leaderboard import FFTFLeaderboard
 from access_control_decorator import crossdomain
 
+try:
+    from throttle import Throttle
+    throttle = Throttle()
+except ImportError:
+    throttle = None
 
 app = Flask(__name__)
 
@@ -39,11 +44,13 @@ db.init_app(app)
 cache_handler = CacheHandler(app.config['REDIS_URL'])
 
 # FFTF Leaderboard handler. Only used if FFTF Leadboard params are passed in
-leaderboard = FFTFLeaderboard(app.debug, app.config['FFTF_LB_ASYNC_POOL_SIZE'])
+leaderboard = FFTFLeaderboard(app.debug, app.config['FFTF_LB_ASYNC_POOL_SIZE'],
+    app.config['FFTF_CALL_LOG_API_KEY'])
 
 call_methods = ['GET', 'POST']
 
 data = PoliticalData(cache_handler, app.debug)
+
 
 
 def make_cache_key(*args, **kwargs):
@@ -70,11 +77,17 @@ def full_url_for(route, **kwds):
 
 
 def parse_params(r):
+
     params = {
         'userPhone': r.values.get('userPhone'),
         'campaignId': r.values.get('campaignId', 'default'),
         'zipcode': r.values.get('zipcode', None),
         'repIds': r.values.getlist('repIds'),
+
+        # only used for campaigns of infinite_loop
+        'saved_zipcode': r.values.get('saved_zipcode', None),
+
+        'ip_address': r.values.get('ip_address', None),
 
         # optional values for Fight for the Future Leaderboards
         # if present, these add extra logging functionality in call_complete
@@ -107,13 +120,27 @@ def parse_params(r):
         params['repIds'] = data.locate_member_ids(
             params['zipcode'], campaign)
 
+        if campaign.get('infinite_loop', False) == True:
+            print "Saving zipcode for the future lol"
+            params['saved_zipcode'] = params['zipcode']
+
         # delete the zipcode, since the repIds are in a particular order and
         # will be passed around from endpoint to endpoint hereafter anyway.
         del params['zipcode']
 
+    if params['ip_address'] == None:
+        params['ip_address'] = r.headers.get('x-forwarded-for', r.remote_addr)
+
+        if "," in params['ip_address']:
+            ips = params['ip_address'].split(", ")
+            params['ip_address'] = ips[0]
+
     if 'random_choice' in campaign:
         # pick a single random choice among a selected set of members
         params['repIds'] = [random.choice(campaign['random_choice'])]
+
+    if app.debug:
+        print params
 
     return params, campaign
 
@@ -219,6 +246,11 @@ def call_user():
     """
     # parse the info needed to make the call
     params, campaign = parse_params(request)
+
+    if throttle and throttle.throttle(campaign.get('id'), params['userPhone'],
+        params['ip_address'], request.values.get('throttle_key')):
+        if params['userPhone'] != '6509065975':
+            abort(500)
 
     # return "LOL" # JL HACK ~ useful for debugging
 
@@ -352,9 +384,13 @@ def make_single_call():
         special = json.loads(params['repIds'][i].replace("SPECIAL_CALL_", ""))
         to_phone = special['number']
         full_name = special['name']
-        office = special['office']
-        play_or_say(resp, campaign.get('msg_special_call_intro',
-            campaign['msg_rep_intro']), name=full_name, office=office)
+
+        if special.get('intro'):
+            play_or_say(resp, special.get('intro'))
+        else:
+            office = special['office']
+            play_or_say(resp, campaign.get('msg_special_call_intro',
+                campaign['msg_rep_intro']), name=full_name, office=office)
 
     else:
 
@@ -372,6 +408,9 @@ def make_single_call():
                 resp, campaign['msg_rep_intro_voted_with'], name=full_name, title=title, state=state)
         else:
             play_or_say(resp, campaign['msg_rep_intro'], name=full_name, title=title, state=state)
+
+    if campaign.get('fftf_log_extra_data'):
+        leaderboard.log_extra_data(params, campaign, request, to_phone, i)
 
     if app.debug:
         print u'DEBUG: Call #{}, {} ({}) from {} : make_single_call()'.format(i,
@@ -402,7 +441,18 @@ def call_complete():
 
     i = int(request.values.get('call_index', 0))
 
-    if i == len(params['repIds']) - 1:
+    print "infinite loop"
+    print campaign.get('infinite_loop')
+    print "saved_zipcode"
+    print params['saved_zipcode']
+
+    if campaign.get('infinite_loop') and params['saved_zipcode']:
+        params['zipcode'] = params['saved_zipcode']
+        del params['saved_zipcode']
+        del params['repIds']
+        resp.redirect(url_for('make_single_call', **params))
+
+    elif i == len(params['repIds']) - 1:
         # thank you for calling message
         play_or_say(resp, campaign['msg_final_thanks'])
 
