@@ -557,7 +557,6 @@ def recent_calls():
 @app.route('/live')
 @requires_auth
 def live():
-    campaign = request.values.get('campaign', 'default')
     return render_template('live.html')
 
 
@@ -572,6 +571,16 @@ def stats():
     else:
         return jsonify(error="access denied")
 
+
+@app.route('/admin')
+@requires_auth
+def admin():
+    return render_template('admin.html')
+
+
+@app.route('/admin/legislators.json')
+def admin_legislators():
+    return jsonify(data.legislators)
 
 if __name__ == '__main__':
     # load the debugger config
