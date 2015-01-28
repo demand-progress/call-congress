@@ -18,6 +18,66 @@
   msg_press_1: You pressed 1 at the prompt to do something assuming a callback URL was defined.
   msg_opt_out: Sorry to see you go.
 
+- id: cbc-nn
+  numbers:
+    - 720-627-6889
+  repIds:
+    - A000370 # Rep Alma Adams, 202-225-1510
+    - B000490 # Rep Sanford Bishop, 202-225-3631
+    - B000911 # Rep Corrine Brown, 202-225-0123
+    - B001251 # Rep George Butterfield, 202-225-3101
+    - B001270 # Rep Karen Bass, 202-225-7084
+    - B001281 # Rep Joyce Beatty, 202-225-4324
+    - B001288 # Sen Cory Booker, 202-224-3224
+    - C001072 # Rep André Carson, 202-225-4011
+    - C000537 # Rep James Clyburn, 202-225-3315
+    - C000714 # Rep John Conyers, 202-225-5126
+    - C000984 # Rep Elijah Cummings, 202-225-4741
+    - C001049 # Rep Wm. Clay, 202-225-2406
+    - C001061 # Rep Emanuel Cleaver, 202-225-4535
+    - C001067 # Rep Yvette Clarke, 202-225-6231
+    - D000096 # Rep Danny Davis, 202-225-5006
+    - E000288 # Rep Keith Ellison, 202-225-4755
+    - E000290 # Rep Donna Edwards, 202-225-8699
+    - F000043 # Rep Chaka Fattah, 202-225-4001
+    - F000455 # Rep Marcia Fudge, 202-225-7032
+    - G000553 # Rep Al Green, 202-225-7508
+    - H000324 # Rep Alcee Hastings, 202-225-1313
+    - J000032 # Rep Sheila Jackson Lee, 202-225-3816
+    - J000126 # Rep Eddie Johnson, 202-225-8885
+    - J000288 # Rep Henry Johnson, 202-225-1605
+    - J000294 # Rep Hakeem Jeffries, 202-225-5936
+    - K000385 # Rep Robin Kelly, 202-225-0773
+    - L000287 # Rep John Lewis, 202-225-3801
+    - L000551 # Rep Barbara Lee, 202-225-2661
+    - L000581 # Rep Brenda Lawrence, 202-225-5802
+    - L000584 # Rep Mia Love, 202-225-3011
+    - M001137 # Rep Gregory Meeks, 202-225-3461
+    - M001160 # Rep Gwen Moore, 202-225-4572
+    - N000147 # Del Eleanor Norton, 202-225-8050
+    - P000604 # Rep Donald Payne, 202-225-3436
+    - P000610 # Del Stacey Plaskett, 202-225-1790
+    - R000053 # Rep Charles Rangel, 202-225-4365
+    - R000515 # Rep Bobby Rush, 202-225-4372
+    - R000588 # Rep Cedric Richmond, 202-225-6636
+    - S000185 # Rep Robert Scott, 202-225-8351
+    - S001157 # Rep David Scott, 202-225-2939
+    - S001185 # Rep Terri Sewell, 202-225-2665
+    - T000193 # Rep Bennie Thompson, 202-225-5876
+    - V000131 # Rep Marc Veasey, 202-225-9897
+    - W000187 # Rep Maxine Waters, 202-225-2201
+    - W000808 # Rep Frederica Wilson, 202-225-4506
+    - W000822 # Rep Bonnie Watson Coleman, 202-225-5801
+  randomize_order: true
+  target_house: false
+  target_senate: false
+  msg_intro: http://www.callblackcongress.net/audio/msg_intro.mp3
+  msg_intro_confirm: http://www.callblackcongress.net/audio/msg_intro_confirm.mp3
+  msg_rep_intro: Now connecting you to {{title}} {{name}}, {{state}}.
+  msg_between_thanks: You're doing great - here's the next call.
+  msg_final_thanks: Thank you!
+  call_human_check: false
+
 - id: republicans-love-comcast
   numbers:
     - 571-414-0090
