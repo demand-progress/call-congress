@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{%block title%}Campaign Stats{%endblock%}
+
+{%block head_scripts%}
+  <script src="static/js/jquery.timeago.js"></script>
+  <script>
+  $(document).ready(function() {
+    $(".timeago").timeago();
+  });
+  </script>
+{%endblock%}
+
+{%block body%}
+  <div class="content-container">
+    <div>
+      <h1 id="campaign">Campaign Stats: {{stats.campaign}}</h1>
+    </div>
+    <div class="box">
+      <ul id="stats">
+        <li>Total Calls: {{stats.calls.total}}
+      </ul>
+      <ul id="reps">
+        {% for (repId,count) in stats.calls.reps.items() %}
+          {% with member = reps[repId] %}
+          <li>{{member['title']}} {{member['firstname']}} {{member['lastname']}}: {{count}}</li>
+          {% endwith %}
+        {% endfor %}
+      </ul>
+    </div>
+    <p>Last Updated: <abbr class="timeago" title="{{updated}}"></abbr>
+  </div>
+{%endblock%}

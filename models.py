@@ -76,7 +76,7 @@ def log_call(params, campaign, request):
 
 def call_count(campaign_id):
     try:
-        return (db.session.query(db.func.Count(Call.zipcode))
+        return (db.session.query(db.func.Count(Call.id))
                 .filter(Call.campaign_id == campaign_id).all())[0][0]
     except SQLAlchemyError:
         logging.error('Failed to get call_count:', exc_info=True)

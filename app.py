@@ -502,8 +502,8 @@ def demo():
 
 
 @cache.cached(timeout=60)
-@app.route('/count')
-def count():
+@app.route('/count.json')
+def count_json():
     @after_this_request
     def add_expires_header(response):
         expires = datetime.utcnow()
@@ -555,15 +555,9 @@ def recent_calls_json():
 
     return jsonify(campaign=campaign, calls=serialized_calls, count=len(serialized_calls))
 
-@app.route('/live')
-@requires_auth
-def live():
-    return render_template('live.html')
-
-
 @cache.cached(timeout=60, key_prefix=make_cache_key)
-@app.route('/stats')
-def stats():
+@app.route('/stats.json')
+def stats_json():
     password = request.values.get('password', None)
     campaign = request.values.get('campaign', 'default')
 
@@ -572,6 +566,25 @@ def stats():
     else:
         return jsonify(error="access denied")
 
+@app.route('/live')
+@requires_auth
+def live():
+    return render_template('live.html')
+
+@app.route('/stats')
+@requires_auth
+def stats():
+    campaign = request.values.get('campaign', 'default')
+    stats = aggregate_stats(campaign)
+
+    total = 0
+    reps = {}
+    for (repId,count) in stats['calls']['reps'].items():
+        total += count
+        reps[repId] = data.get_legislator_by_id(repId)
+    stats['calls']['total'] = total
+
+    return render_template('stats.html', stats=stats, reps=reps, updated=datetime.now().isoformat())
 
 @app.route('/admin')
 @requires_auth
