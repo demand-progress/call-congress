@@ -520,8 +520,8 @@ def count():
 
 
 @cache.cached(timeout=60, key_prefix=make_cache_key)
-@app.route('/recent_calls')
-def recent_calls():
+@app.route('/recent_calls.json')
+def recent_calls_json():
     @after_this_request
     def add_expires_header(response):
         expires = datetime.utcnow()
@@ -546,6 +546,7 @@ def recent_calls():
         member = data.get_legislator_by_id(c.member_id)
         if member:
             s['member'] = dict(
+                            id=c.member_id,
                             title=member['title'],
                             firstname=member['firstname'],
                             lastname=member['lastname']

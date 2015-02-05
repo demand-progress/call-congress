@@ -11,15 +11,15 @@ function getQueryVariable(variable) {
 
 function getRecentCalls() {
   $.ajax({
-    url: '/recent_calls',
+    url: '/recent_calls.json',
     data: { campaign: campaign,
             since: lastRun,
-            limit: '10'
+            limit: '25'
     },
     success: function(data) {
-      console.log('callback @ '+lastRun);
+      console.log('callback @ '+lastRun, data);
       var t = callsTemplate({calls: data.calls});
-      $('ul#calls').append(t);
+      $('ul#calls').prepend(t);
       $("abbr.timeago").timeago();
       lastRun = (new Date()).toISOString();
     }
@@ -38,8 +38,8 @@ $(function () {
 
   var since = getQueryVariable('since');
   if (since) { lastRun = since; }
-  else { lastRun = new Date(((new Date()) - 5*1000)).toISOString(); } // default to last 5 minutes
+  else { lastRun = new Date(((new Date()) - 24*60*1000)).toISOString(); } // default to last 24 hours
 
   getRecentCalls();
-  interval = setInterval(getRecentCalls, 5000);
+  interval = setInterval(getRecentCalls, 60*1000); // refresh once per minute
 });
