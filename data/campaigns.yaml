@@ -249,7 +249,7 @@
   skip_star_confirm: false
   call_human_check: false
   only_call_1_rep: true
-  max_calls_to_congress: 2
+  max_calls_to_congress: 3
   fftf_log_extra_data: true
   extra_last_calls:
     - name: FCC Chairman Tom Wheeler
@@ -329,49 +329,18 @@
     - 262-725-0171
   target_house: false
   target_senate: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro_new_2.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_2.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_new.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_call_block_intro_new_2.mp3
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_thanks.mp3
   press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=fcc-blanket-recurring
   call_human_check: false
   fftf_log_extra_data: true
-  infinite_loop: true
+  number_of_extra_first_calls: 10
   extra_first_calls:
-    - name: Jonathan Sallet
-      number: 202-418-2836
-    - name: Stephanie Weiner
-      number: 202-418-1752
-    - name: Jacob Lewis
-      number: 202-418-1767
-    - name: Michele Ellison
-      number: 202-418-1718
-    - name: Mignon Clyburn
-      number: 202-418-2100
-    - name: Adonis Hoffman
-      number: 202-418-2102
-    - name: Rebekah Goodheart
-      number: 202-418-2100
-    - name: Louis Peraertz
-      number: 202-418-2100
-    - name: Daniel Alvarez
-      number: 202-418-1000
-    - name: Ruth Milkman
-      number: 202-418-2107
-    - name: Gigi Sohn
-      number: 202-418-0898
-    - name: Philip Verveer
-      number: 202-418-0897
-    - name: Maria Kirby
-      number: 202-418-1476
-    - name: Diane Cornell
-      number: 202-418-0899
-    - name: Renee Gregory
-      number: 202-418-0533
-    - name: Tom Wheeler
-      number: 202-418-1000
     - name: Matthew Berry
       number: 202-418-2005
     - name: Nicholas Degani
@@ -380,26 +349,16 @@
       number: 202-418-2000
     - name: Mike O'Rielly
       number: 202-418-2300
+    - name: Lori Alexiou
+      number: 202-418-2001
+    - name: Deanne Erwin
+      number: 202-418-2000
+    - name: Erin McGrath
+      number: 202-418-2042
     - name: Amy Bender
-      number: 202-418-2300
-    - name: Shannon Gilson
-      number: 202-418-0505
-    - name: Mark Wigfield
-      number: 202-418-0253
-    - name: Kim Hart
-      number: 202-418-8191
-    - name: Jonathan Chambers
-      number: 202-418-2007
-    - name: Jon Wilkins
-      number: 202-418-8221
-    - name: Julie Veach
-      number: 202-418-1558
-    - name: Matthew Delnero
-      number: 202-418-7433
-    - name: Roger Sherman
-      number: 202-418-0656
-    - name: Kris Moneith
-      number: 202-418-1098
+      number: 202-418-1469
+    - name: Susan Fisenne
+      number: 202-418-2502
 
 - id: fcc-blanket-recurring
   numbers:
@@ -415,49 +374,18 @@
     - 262-725-0171
   target_house: false
   target_senate: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro_secondary.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro_new_secondary.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_secondary.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_new.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_call_block_intro_new_2.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   msg_opt_out: http://battleforthenet.s3.amazonaws.com/audio/fcc_opt_out.mp3
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
   call_human_check: false
   fftf_log_extra_data: true
-  infinite_loop: true
+  number_of_extra_first_calls: 10
   extra_first_calls:
-    - name: Jonathan Sallet
-      number: 202-418-2836
-    - name: Stephanie Weiner
-      number: 202-418-1752
-    - name: Jacob Lewis
-      number: 202-418-1767
-    - name: Michele Ellison
-      number: 202-418-1718
-    - name: Mignon Clyburn
-      number: 202-418-2100
-    - name: Adonis Hoffman
-      number: 202-418-2102
-    - name: Rebekah Goodheart
-      number: 202-418-2100
-    - name: Louis Peraertz
-      number: 202-418-2100
-    - name: Daniel Alvarez
-      number: 202-418-1000
-    - name: Ruth Milkman
-      number: 202-418-2107
-    - name: Gigi Sohn
-      number: 202-418-0898
-    - name: Philip Verveer
-      number: 202-418-0897
-    - name: Maria Kirby
-      number: 202-418-1476
-    - name: Diane Cornell
-      number: 202-418-0899
-    - name: Renee Gregory
-      number: 202-418-0533
-    - name: Tom Wheeler
-      number: 202-418-1000
     - name: Matthew Berry
       number: 202-418-2005
     - name: Nicholas Degani
@@ -466,26 +394,16 @@
       number: 202-418-2000
     - name: Mike O'Rielly
       number: 202-418-2300
+    - name: Lori Alexiou
+      number: 202-418-2001
+    - name: Deanne Erwin
+      number: 202-418-2000
+    - name: Erin McGrath
+      number: 202-418-2042
     - name: Amy Bender
-      number: 202-418-2300
-    - name: Shannon Gilson
-      number: 202-418-0505
-    - name: Mark Wigfield
-      number: 202-418-0253
-    - name: Kim Hart
-      number: 202-418-8191
-    - name: Jonathan Chambers
-      number: 202-418-2007
-    - name: Jon Wilkins
-      number: 202-418-8221
-    - name: Julie Veach
-      number: 202-418-1558
-    - name: Matthew Delnero
-      number: 202-418-7433
-    - name: Roger Sherman
-      number: 202-418-0656
-    - name: Kris Moneith
-      number: 202-418-1098
+      number: 202-418-1469
+    - name: Susan Fisenne
+      number: 202-418-2502
 
 - id: whitehouse-blanket
   numbers:
@@ -860,3 +778,161 @@
     - C001097   # Cardenas
     - B001251   # Butterfield
     - R000515   # Rush
+
+- id: title-x-committees
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: false
+  target_senate: false
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_msg_call_block_intro.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_final_thanks: k thanks bye
+  call_human_check: false
+  fftf_log_extra_data: true
+  exclusions_google_spreadsheet_id: 12g70eNkGA2hhRYKSENaeGxsgGyFukLRMHCqrLizdhlw
+  exclusions_spreadsheet_match_field: team
+  exclusions_spreadsheet_match_value: team-internet
+  exclusions_spreadsheet_bioguide_col: bioguide
+  number_of_extra_first_calls: 10
+  extra_first_calls:
+    # Rs on E+C
+    - B000213 #
+    - B001243 #
+    - B001248  #
+    - B001257
+    - B001275
+    - B001284
+    - C001092
+    - C001096
+    - E000291
+    - F000461
+    - G000558
+    - G000568
+    - H001045
+    - H001067
+    - J000292
+    - K000378
+    - L000566
+    - L000567
+    - L000576
+    - M001151
+    - M001159
+    - M001180
+    - M001190
+    - O000168
+    - P000373
+    - P000602
+    - S000364
+    - S001176
+    - U000031
+    - W000413
+    - W000791
+    # Senate Rs
+    - A000368
+    - B000575
+    - C001098
+    - D000618
+    - F000463
+    - G000562
+    - H001041
+    - J000293
+    - M000934
+    - R000595
+    - S001198
+    - T000250
+    - W000437
+    # Senate Ds, minus strong supporters
+    #- B001277 # Blumenthal
+    #- B001288 # Booker
+    - C000127
+    - K000367
+    #- M000133 # Markey
+    - M001170
+    - M001183
+    - P000595
+    - S001194
+    - U000039
+    - N000032   # NELSON!! (repeated 3 times for "weighting")
+    - P000034   # Frank Pallone
+    - C001067   # Yvette Clark
+    - E000179   # Eliot Engel
+    - C001036   # Lois Capps
+    - M001163   # Doris Matsui
+    - C001066   # Kathy Castor
+    - M001166   # Jerry McNerny
+    - L000570   # Ben Ray Lujan
+    - Y000062   # John Yarmuth
+    - S001180   # Schrader
+    - C001097   # Cardenas
+    - B001251   # Butterfield
+    - R000515   # Rush
+
+- id: stop-gop-fcc-investigation
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: false
+  target_senate: false
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_round2_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
+  msg_call_block_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_call_block_intro.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_final_thanks: k thanks bye
+  call_human_check: false
+  fftf_log_extra_data: true
+  number_of_extra_first_calls: 3
+  extra_first_calls:
+    - C001076
+    - S001197
+    - J000293
+  number_of_extra_last_calls: 10
+  extra_last_calls:
+    - F000460
+    - C001103
+    - L000571
+    - P000609
+    - G000576
+    - J000289
+    - H001071
+    - D000533
+    - M000689
+    - A000367
+    - B001297
+    - M001187
+    - W000819
+    - T000463
+    - M001182
+    - G000565
+    - B001294
+    - D000621
+    - D000616
+    - R000604
+    - M001184
+    - W000798
+    - G000566
+    - H001073
