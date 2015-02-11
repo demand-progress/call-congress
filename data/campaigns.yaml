@@ -779,7 +779,7 @@
     - B001251   # Butterfield
     - R000515   # Rush
 
-- id: title-x-committees
+- id: stop-gop-fcc-investigation
   numbers:
     - 650-716-1243
     - 205-683-2590
@@ -793,12 +793,68 @@
     - 262-725-0171
   target_house: false
   target_senate: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_intro.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_round2_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_msg_call_block_intro.mp3
+  msg_call_block_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_call_block_intro.mp3
   msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
   msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_final_thanks: k thanks bye
+  call_human_check: false
+  fftf_log_extra_data: true
+  number_of_extra_first_calls: 3
+  extra_first_calls:
+    - C001076
+    - S001197
+    - J000293
+  number_of_extra_last_calls: 6
+  extra_last_calls:
+    - F000460
+    - C001103
+    - L000571
+    - P000609
+    - G000576
+    - J000289
+    - H001071
+    - D000533
+    - M000689
+    - A000367
+    - B001297
+    - M001187
+    - W000819
+    - T000463
+    - M001182
+    - G000565
+    - B001294
+    - D000621
+    - D000616
+    - R000604
+    - M001184
+    - W000798
+    - G000566
+    - H001073
+
+- id: title-x-committees-pia
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: false
+  target_senate: false
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/pia_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/pia_prompt.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/pia_connecting.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/pia_prompt_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/pia_invalid_zip.mp3
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/pia_msg_between_thanks.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   call_human_check: false
@@ -880,59 +936,3 @@
     - C001097   # Cardenas
     - B001251   # Butterfield
     - R000515   # Rush
-
-- id: stop-gop-fcc-investigation
-  numbers:
-    - 650-716-1243
-    - 205-683-2590
-    - 480-405-0187
-    - 719-354-2153
-    - 203-487-5661
-    - 239-330-1915
-    - 217-441-2582
-    - 218-729-2044
-    - 612-999-1433
-    - 262-725-0171
-  target_house: false
-  target_senate: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_round2_intro.mp3
-  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
-  msg_call_block_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_call_block_intro.mp3
-  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
-  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
-  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
-  msg_rep_intro: Now connecting you to {{name}}.
-  msg_final_thanks: k thanks bye
-  call_human_check: false
-  fftf_log_extra_data: true
-  number_of_extra_first_calls: 3
-  extra_first_calls:
-    - C001076
-    - S001197
-    - J000293
-  number_of_extra_last_calls: 6
-  extra_last_calls:
-    - F000460
-    - C001103
-    - L000571
-    - P000609
-    - G000576
-    - J000289
-    - H001071
-    - D000533
-    - M000689
-    - A000367
-    - B001297
-    - M001187
-    - W000819
-    - T000463
-    - M001182
-    - G000565
-    - B001294
-    - D000621
-    - D000616
-    - R000604
-    - M001184
-    - W000798
-    - G000566
-    - H001073
