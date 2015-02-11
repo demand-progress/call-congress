@@ -905,13 +905,13 @@
   msg_final_thanks: k thanks bye
   call_human_check: false
   fftf_log_extra_data: true
-  number_of_extra_first_calls: 3
+  number_of_extra_first_calls: 4
   extra_first_calls:
     - C001076
     - S001197
     - J000293
     - C000174
-  number_of_extra_last_calls: 10
+  number_of_extra_last_calls: 9
   extra_last_calls:
     - F000460
     - C001103
