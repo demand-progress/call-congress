@@ -123,6 +123,7 @@
   msg_opt_out: Ok, we'll stop calling you. If you change your mind, you can sign up again at Call On Google.net. Thanks for everything you've done!
   call_human_check: false
   infinite_loop: true
+  number_of_extra_first_calls: 10
   extra_first_calls:
     - name: Kent Walker
       number: 650-253-8747
@@ -307,3 +308,4 @@
     - name: Dan Miller
       number: 650-253-4449
       office: Patent Litigation Counsel
+

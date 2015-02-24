@@ -52,7 +52,7 @@ call_methods = ['GET', 'POST']
 
 data = PoliticalData(cache_handler, app.debug)
 
-
+print "Call Congress is starting up!"
 
 def make_cache_key(*args, **kwargs):
     path = request.path
@@ -251,7 +251,8 @@ def call_user():
     if throttle and throttle.throttle(campaign.get('id'), params['userPhone'],
         params['ip_address'], request.values.get('throttle_key')):
         if params['userPhone'] != '6509065975':
-            abort(500)
+            # abort(500)
+            pass
 
     # return "LOL" # JL HACK ~ useful for debugging
 
@@ -272,6 +273,7 @@ def call_user():
         result = jsonify(message=call.status, debugMode=app.debug)
         result.status_code = 200 if call.status != 'failed' else 500
     except TwilioRestException, err:
+        print err.msg
         result = jsonify(message=err.msg.split(':')[1].strip())
         result.status_code = 200
 
@@ -380,15 +382,15 @@ def make_single_call():
     i = int(request.values.get('call_index', 0))
     params['call_index'] = i
 
-    if "SPECIAL_CALL_" in params['repIds'][i]:
-        
-        special = json.loads(params['repIds'][i].replace("SPECIAL_CALL_", ""))
-        to_phone = special['number']
-        full_name = special['name']
-        if special.get('intro'):
-            play_or_say(resp, special.get('intro'))
+    if "S_" in params['repIds'][i]:
+        special = json.loads(params['repIds'][i].replace("S_", ""))
+        to_phone = special['n']                            # "n" is for "number"
+        full_name = special['p']                       # "p" is for "politician"
+
+        if special.get('i'):                                # "i" is for "intro"
+            play_or_say(resp, special.get('i'))
         else:
-            office = special['office']
+            office = special.get('o', '')                  # "o" is for "office"
             play_or_say(resp, campaign.get('msg_special_call_intro',
                 campaign['msg_rep_intro']), name=full_name, office=office)
 
@@ -397,8 +399,9 @@ def make_single_call():
         member = [l for l in data.legislators
                   if l['bioguide_id'] == params['repIds'][i]][0]
         to_phone = member['phone']
-        full_name = unicode("{} {}".format(
-            member['firstname'], member['lastname']), 'utf8')
+        title = "Representative" if member['title'] == 'Rep' else 'Senator'
+        full_name = unicode("{} {} {}".format(
+            title, member['firstname'], member['lastname']), 'utf8')
         title = member['title']
         state = member['state']
 
@@ -440,11 +443,6 @@ def call_complete():
     resp = twilio.twiml.Response()
 
     i = int(request.values.get('call_index', 0))
-
-    print "infinite loop"
-    print campaign.get('infinite_loop')
-    print "saved_zipcode"
-    print params['saved_zipcode']
 
     if campaign.get('infinite_loop') and params['saved_zipcode']:
         params['zipcode'] = params['saved_zipcode']
