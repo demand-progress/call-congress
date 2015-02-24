@@ -105,6 +105,28 @@
   msg_between_thanks: You're doing great - here's the next call.
   msg_final_thanks: Thank you!
 
+- id: call-off-tpp
+  numbers:
+  repIds:
+    - B001267 # Sen Michael Bennet, 202-224-5852
+    - B001288 # Sen Cory Booker, 202-224-3224
+    - C000141 # Sen Benjamin Cardin, 202-224-4524
+    - C001047 # Sen Shelley Capito, 202-224-6472
+    - G000555 # Sen Kirsten Gillibrand, 202-224-4451
+    - H001069 # Sen Heidi Heitkamp, 202-224-2043
+    - K000367 # Sen Amy Klobuchar, 202-224-3244
+    - K000383 # Sen Angus King, 202-224-5344
+    - M001170 # Sen Claire McCaskill, 202-224-6154
+    - P000449 # Sen Robert Portman, 202-224-3353
+    - P000603 # Sen Rand Paul, 202-224-4343
+    - S000148 # Sen Charles Schumer, 202-224-6542
+    - S001181 # Sen Jeanne Shaheen, 202-224-2841
+    - T000464 # Sen Jon Tester, 202-224-2644
+    - W000779 # Sen Ron Wyden, 202-224-5244
+  target_house: false
+  target_senate: false
+
+
 - id: google-nn
   numbers:
     - 650-204-3239
