@@ -77,7 +77,7 @@
   msg_intro: http://www.theserepublicanslovecomcast.com/audio/msg_intro.mp3
   msg_intro_confirm: http://www.theserepublicanslovecomcast.com/audio/msg_intro_confirm.mp3
   msg_call_block_intro: http://www.theserepublicanslovecomcast.com/audio/msg_call_block_intro.mp3
-  msg_rep_intro: Now connecting you to {{title}} {{name}}, {{state}}.
+  msg_rep_intro: Now connecting you to {{name}}.
   msg_between_thanks: You're doing great - here's the next call.
   msg_final_thanks: Thank you!
   msg_opt_out: Ok, we'll stop calling you. If you change your mind, you can sign up again at These Republicans Love Comcast.com. Thanks for everything you've done!
@@ -125,7 +125,7 @@
   skip_star_confirm: true
   msg_intro: http://www.calloffthetpp.com/audio/msg_intro.mp3
   msg_call_block_intro: http://www.calloffthetpp.com/audio/msg_call_block_intro.mp3
-  msg_rep_intro: Now connecting you to {{title}} {{name}}, {{state}}.
+  msg_rep_intro: Now connecting you to {{name}}.
   msg_between_thanks: http://www.calloffthetpp.com/audio/msg_between_thanks.mp3
   msg_final_thanks: Thank you. Goodbye!
 
