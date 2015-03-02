@@ -21,8 +21,6 @@
 - id: cbc-nn
   numbers:
     - 720-627-6889
-    - 319-774-2016
-    - 201-731-6757
     - 571-414-0090
   repIds:
     - B001251 # Rep George Butterfield, 202-225-3101
@@ -44,8 +42,6 @@
 - id: chc-nn
   numbers:
     - 919-926-9388
-    - 831-706-4810
-    - 832-981-6215
     - 484-901-7094
   repIds:
     - C001097 # Rep Tony Cárdenas, 202-225-6131
@@ -73,11 +69,7 @@
 
 - id: republicans-love-comcast
   numbers:
-    - 571-414-0090
-    - 201-731-6757
-    - 319-774-2016
     - 325-718-4311
-    - 720-627-6889
   repIds:
     [U000031, T000250, W000791, W000437, B000575, R000595, A000368, H001041, C000542, S001184, C001098, F000463, J000293, B000213, B001243, L000566, H000067, W000413, S000364, P000373, T000459, R000575, M001151, B001248, G000550, S001176, M001159, M001159, L000567, C001075, G000558, O000168, M001180, G000562, P000602, K000378, G000568, B001257, J000292, L000576, E000291]
   randomize_order: true
@@ -106,16 +98,22 @@
   msg_final_thanks: Thank you!
 
 - id: call-off-tpp
-  numbers:
+  numbers: 
+    - 319-774-2016
+    - 201-731-6757
+    - 832-981-6215
+    - 831-706-4810
   repIds:
     - B001267 # Sen Michael Bennet, 202-224-5852
     - B001288 # Sen Cory Booker, 202-224-3224
+    - C000127 # Sen Maria Cantwell, 202-224-3441
     - C000141 # Sen Benjamin Cardin, 202-224-4524
     - C001047 # Sen Shelley Capito, 202-224-6472
     - G000555 # Sen Kirsten Gillibrand, 202-224-4451
     - H001069 # Sen Heidi Heitkamp, 202-224-2043
     - K000367 # Sen Amy Klobuchar, 202-224-3244
     - K000383 # Sen Angus King, 202-224-5344
+    - L000577 # Sen Mike Lee, 202-224-5444
     - M001170 # Sen Claire McCaskill, 202-224-6154
     - P000449 # Sen Robert Portman, 202-224-3353
     - P000603 # Sen Rand Paul, 202-224-4343
@@ -125,6 +123,12 @@
     - W000779 # Sen Ron Wyden, 202-224-5244
   target_house: false
   target_senate: false
+  skip_star_confirm: true
+  msg_intro: http://www.calloffthetpp.com/audio/msg_intro.mp3
+  msg_call_block_intro: http://www.calloffthetpp.com/audio/msg_call_block_intro.mp3
+  msg_rep_intro: Now connecting you to {{title}} {{name}}, {{state}}.
+  msg_between_thanks: http://www.calloffthetpp.com/audio/msg_between_thanks.mp3
+  msg_final_thanks: Thank you. Goodbye!
 
 
 - id: google-nn
