@@ -18,26 +18,6 @@
   msg_press_1: You pressed 1 at the prompt to do something assuming a callback URL was defined.
   msg_opt_out: Sorry to see you go.
 
-- id: cbc-nn
-  numbers:
-    - 720-627-6889
-    - 571-414-0090
-  repIds:
-    - B001251 # Rep George Butterfield, 202-225-3101
-    - R000515 # Rep Bobby Rush, 202-225-4372
-    - C001049 # Rep Wm. Clay, 202-225-2406
-    - M001137 # Rep Gregory Meeks, 202-225-3461
-  randomize_order: true
-  target_house: false
-  target_senate: false
-  msg_intro: http://www.call4netfreedom.org/audio/msg_intro.mp3
-  msg_intro_confirm: http://www.call4netfreedom.org/audio/msg_intro_confirm.mp3
-  msg_call_block_intro: http://www.call4netfreedom.org/audio/msg_call_block_intro.mp3
-  msg_rep_intro: Now connecting you to {{name}}.
-  msg_between_thanks: You're doing great - here's the next call.
-  msg_final_thanks: Thank you!
-  call_human_check: false
-
 - id: chc-nn
   numbers:
     - 919-926-9388
