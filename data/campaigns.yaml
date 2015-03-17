@@ -18,6 +18,28 @@
   msg_press_1: You pressed 1 at the prompt to do something assuming a callback URL was defined.
   msg_opt_out: Sorry to see you go.
 
+- id: cbc-nn
+  numbers:
+    - 832-981-6215
+    - 571-414-0090
+  repIds:
+    - B001251 # Rep George Butterfield, 202-225-3101
+    - R000515 # Rep Bobby Rush, 202-225-4372
+    - C001049 # Rep Wm. Clay, 202-225-2406
+    - C000984 # Rep Elijah Cummings, 202-225-4741
+    - C001067 # Rep Yvette Clarke, 202-225-6231
+    - D000096 # Rep Danny Davis, 202-225-5006
+  randomize_order: true
+  target_house: false
+  target_senate: false
+  msg_intro: http://www.call4netfreedom.org/audio/msg_intro.mp3
+  msg_intro_confirm: http://www.call4netfreedom.org/audio/msg_intro_confirm.mp3
+  msg_call_block_intro: http://www.call4netfreedom.org/audio/msg_call_block_intro.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_between_thanks: http://www.call4netfreedom.org/audio/msg_between_thanks.mp3
+  msg_final_thanks: Thank you!
+  call_human_check: false
+
 - id: chc-nn
   numbers:
     - 919-926-9388
