@@ -46,16 +46,12 @@
     - 484-901-7094
   repIds:
     - C001097 # Rep Tony Cárdenas, 202-225-6131
-    - L000570 # Rep Ben Luján, 202-225-6190
-    - S001156 # Rep Linda Sánchez, 202-225-6676
-    - B000287 # Rep Xavier Becerra, 202-225-6235
-    - C001091 # Rep Joaquin Castro, 202-225-3236
+    - G000535 # Rep Luis Gutiérrez, 202-225-8203
     - G000574 # Rep Ruben Gallego, 202-225-4065
-    - H000636 # Rep Rubén Hinojosa, 202-225-2531
+    - L000570 # Rep Ben Luján, 202-225-6190
     - L000580 # Rep Michelle Lujan Grisham, 202-225-6316
-    - R000486 # Rep Lucille Roybal-Allard, 202-225-1766
     - R000599 # Rep Raul Ruiz, 202-225-5330
-    - V000132 # Rep Filemon Vela, 202-225-9901
+    - S000030 # Rep Loretta Sanchez, 202-225-2965
     - V000081 # Rep Nydia Velázquez, 202-225-2361
   randomize_order: true
   target_house: false
@@ -63,7 +59,7 @@
   msg_intro: http://www.calls4the.net/audio/msg_intro.mp3
   msg_intro_confirm: http://www.calls4the.net/audio/msg_intro_confirm.mp3
   msg_call_block_intro: http://www.calls4the.net/audio/msg_call_block_intro.mp3
-  msg_rep_intro: Now connecting you to {{title}} {{name}}, {{state}}.
+  msg_rep_intro: Now connecting you to {{name}}.
   msg_between_thanks: You're doing great - here's the next call.
   msg_final_thanks: Thank you!
   call_human_check: false
