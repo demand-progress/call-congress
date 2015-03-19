@@ -18,6 +18,23 @@
   msg_press_1: You pressed 1 at the prompt to do something assuming a callback URL was defined.
   msg_opt_out: Sorry to see you go.
 
+- id: 18mr-nn
+  numbers:
+    - 909-321-5643
+    - 626-414-5083
+  repIds:
+    - C001080
+  randomize_order: true
+  target_house: false
+  target_senate: false
+  msg_intro: http://action.18mr.org/static/audio/chu-nn/msg_intro.mp3
+  msg_intro_confirm: http://action.18mr.org/static/audio/chu-nn/msg_intro_confirm.mp3
+  msg_call_block_intro: http://action.18mr.org/static/audio/chu-nn/msg_call_block_intro.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_between_thanks: http://action.18mr.org/static/audio/chu-nn/msg_between_thanks.mp3
+  msg_final_thanks: http://action.18mr.org/static/audio/chu-nn/thank_you.mp3
+  call_human_check: false
+
 - id: cbc-nn
   numbers:
     - 832-981-6215
