@@ -40,12 +40,11 @@
     - 832-981-6215
     - 571-414-0090
   repIds:
-    - B001251 # Rep George Butterfield, 202-225-3101
-    - R000515 # Rep Bobby Rush, 202-225-4372
-    - C001049 # Rep Wm. Clay, 202-225-2406
-    - C000984 # Rep Elijah Cummings, 202-225-4741
-    - C001067 # Rep Yvette Clarke, 202-225-6231
-    - D000096 # Rep Danny Davis, 202-225-5006
+    - B001270 # Rep Karen Bass, 202-225-7084
+    - F000043 # Rep Chaka Fattah, 202-225-4001
+    - J000032 # Rep Sheila Jackson Lee, 202-225-3816
+    - J000294 # Rep Hakeem Jeffries, 202-225-5936
+    - R000588 # Rep Cedric Richmond, 202-225-6636
   randomize_order: true
   target_house: false
   target_senate: false
