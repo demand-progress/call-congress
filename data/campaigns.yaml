@@ -24,6 +24,7 @@
     - 626-414-5083
   repIds:
     - C001080
+  skip_star_confirm: true
   randomize_order: true
   target_house: false
   target_senate: false
