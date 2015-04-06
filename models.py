@@ -133,10 +133,13 @@ if __name__=="__main__":
 
     ok = raw_input("[ok] to proceed? ")
     if ok == 'ok':
+        c = Call('test','test') #create before create_all, to ensure model is registered w/ sqlalchemy
+
         with app.app_context():
+            print "creating tables"
             db.create_all()
+            db.session.commit()
         
-        c = Call('test','test')
         db.session.add(c)
         db.session.commit()
         print "done"
