@@ -14,9 +14,31 @@
     star for next rep.{{/many_reps}}
   msg_rep_intro: We're now connecting you to {{name}}
   msg_between_thanks: You're doing great - here's the next call.
-  msg_final_thanks: Thank you!
+  msg_final_thanks: Thank you! Goodbye.
   msg_press_1: You pressed 1 at the prompt to do something assuming a callback URL was defined.
   msg_opt_out: Sorry to see you go.
+
+- id: stop-mass-spying
+  numbers:
+    - 325-718-4311
+    - 319-774-2016
+  target_house: true
+  target_senate: false
+  target_house_first: true
+  repIds: [] #no specific, but necessary to skip zip_gather flow
+  extra_last_calls: [
+    # House Judiciary Committee - Republicans
+    A000369, B001293, B001297, C000266, C001076, C001093, D000621, F000445, F000448, F000460, G000289,
+    G000552, G000566, I000056, J000289, K000362, L000573, M001179, P000592, R000601, S000244, S000583, T000475, W000820,
+    # House Judiciary Committee - Democrats
+    B001270, C000714, C001068, C001080, C001084, D000610, D000617, G000535, J000032, J000288, J000294, L000397, N000002,
+    P000596, P000608, R000588
+  ]
+  number_of_extra_last_calls: 5
+  msg_intro: http://www.stopmassspying.com/audio/msg_intro.mp3
+  skip_star_confirm: true
+  msg_call_block_intro: http://www.stopmassspying.com/audio/msg_call_block_intro.mp3
+
 
 - id: 18mr-nn
   numbers:
