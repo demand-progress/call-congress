@@ -549,6 +549,10 @@ def recent_calls_json():
                             firstname=member['firstname'],
                             lastname=member['lastname']
                         )
+        else:
+            #probably special, parse it from json
+            j = json.loads(c.member_id.split('S_')[1])
+            s['member'] = {'office': j['o'], 'name': j['p'], 'number': j['n'], 'title': j['n']}
         serialized_calls.append(s)
 
     return jsonify(campaign=campaign, calls=serialized_calls, count=len(serialized_calls))

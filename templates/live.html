@@ -22,7 +22,7 @@
 
       <script type="text/template" id="recent-calls-template">
         <% _.forEach(calls, function(call) { %>
-          <li><%= call.number %> called <%= call.member.title %> <%= call.member.firstname %> <%= call.member.lastname %>
+          <li><%= call.number %> called <%= call.member.title %> <%= call.member.name %> 
           <abbr class="timeago" title="<%= call.timestamp %>"></abbr></li>
         <% }); %>
       </script>
