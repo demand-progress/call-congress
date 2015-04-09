@@ -102,10 +102,12 @@ def call_list(campaign_id, since, limit=50):
 def aggregate_stats(campaign_id):
     zipcodes = (db.session.query(Call.zipcode, db.func.Count(Call.zipcode))
                 .filter(Call.campaign_id == campaign_id)
+                .filter(Call.status == 'completed')
                 .group_by(Call.zipcode).all())
 
     reps = (db.session.query(Call.member_id, db.func.Count(distinct(Call.user_id)))
             .filter(Call.campaign_id == campaign_id)
+            .filter(Call.status == 'completed')
             .group_by(Call.member_id).all())
 
     return {
