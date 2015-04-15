@@ -549,6 +549,10 @@ def recent_calls_json():
                             firstname=member['firstname'],
                             lastname=member['lastname']
                         )
+        else:
+            #probably special, parse it from json
+            j = json.loads(c.member_id.split('S_')[1])
+            s['member'] = {'office': j['o'], 'name': j['p'], 'number': j['n'], 'title': j['n']}
         serialized_calls.append(s)
 
     return jsonify(campaign=campaign, calls=serialized_calls, count=len(serialized_calls))
@@ -579,7 +583,15 @@ def stats():
     reps = {}
     for (repId,count) in stats['calls']['reps'].items():
         total += count
-        reps[repId] = data.get_legislator_by_id(repId)
+        member = data.get_legislator_by_id(repId)
+        if member:
+            member['name'] = "%(firstname)s %(lastname)s" % member
+            reps[repId] = member
+        else:
+            #probably special, parse it from json
+            s = json.loads(repId.split('S_')[1])
+            d = {'office': s['o'], 'name': s['p'], 'number': s['n'], 'title': s['n']}
+            reps[repId] = d 
     stats['calls']['total'] = total
 
     return render_template('stats.html', stats=stats, reps=reps, updated=datetime.now().isoformat())
