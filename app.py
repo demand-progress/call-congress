@@ -585,13 +585,16 @@ def stats():
         total += count
         member = data.get_legislator_by_id(repId)
         if member:
-            member['name'] = "%(firstname)s %(lastname)s" % member
+            member['name'] = ("%(firstname)s %(lastname)s" % member).decode('utf-8')
             reps[repId] = member
-        else:
+        elif repId.startswith('S_'):
             #probably special, parse it from json
             s = json.loads(repId.split('S_')[1])
-            d = {'office': s['o'], 'name': s['p'], 'number': s['n'], 'title': s['n']}
-            reps[repId] = d 
+            d = {'office': s['o'], 'name': s['p'], 'number': s['n'], 'title': s['i']}
+            reps[repId] = d
+        else:
+            print "weird", repId
+            reps[repId] = repId
     stats['calls']['total'] = total
 
     return render_template('stats.html', stats=stats, reps=reps, updated=datetime.now().isoformat())

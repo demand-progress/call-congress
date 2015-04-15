@@ -17,7 +17,7 @@
       <ul id="reps">
         {% for (repId,count) in stats.calls.reps.items() %}
           {% with member = reps[repId] %}
-            <li>{{member['title'].decode('utf-8')}} {{member['name'].decode('utf-8')}}: {{count}}</li>
+            <li>{{member['title']|default('Sen', true)}} {{member['name']}}: {{count}}</li>
           {% endwith %}
         {% endfor %}
       </ul>
