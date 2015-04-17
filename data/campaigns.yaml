@@ -61,27 +61,6 @@
   msg_final_thanks: Thank you! Goodbye.
   call_human_check: false
 
-- id: cbc-nn
-  numbers:
-    - 832-981-6215
-    - 571-414-0090
-  repIds:
-    - B001270 # Rep Karen Bass, 202-225-7084
-    - F000043 # Rep Chaka Fattah, 202-225-4001
-    - J000032 # Rep Sheila Jackson Lee, 202-225-3816
-    - J000294 # Rep Hakeem Jeffries, 202-225-5936
-    - R000588 # Rep Cedric Richmond, 202-225-6636
-  randomize_order: true
-  target_house: false
-  target_senate: false
-  msg_intro: http://www.call4netfreedom.org/audio/msg_intro.mp3
-  msg_intro_confirm: http://www.call4netfreedom.org/audio/msg_intro_confirm.mp3
-  msg_call_block_intro: http://www.call4netfreedom.org/audio/msg_call_block_intro.mp3
-  msg_rep_intro: Now connecting you to {{name}}.
-  msg_between_thanks: http://www.call4netfreedom.org/audio/msg_between_thanks.mp3
-  msg_final_thanks: Thank you!
-  call_human_check: false
-
 - id: chc-nn
   numbers:
     - 919-926-9388
