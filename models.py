@@ -110,15 +110,20 @@ def aggregate_stats(campaign_id):
             .filter(Call.status == 'completed')
             .group_by(Call.member_id).all())
 
+    total = (db.session.query(db.func.Count(distinct(Call.call_id)))
+             .filter(Call.campaign_id == campaign_id)
+             .filter(Call.status == 'completed').all())
+
     return {
         'campaign': campaign_id,
         'calls': {
             'zipcodes': dict(tuple(z) for z in zipcodes),
             'reps': dict(tuple(r) for r in reps)
-        }
+        },
+        'total': total
     }
 
-if __name__=="__main__":
+if __name__ == "__main__":
     import socket
     from flask import Flask
     from flask_sqlalchemy import SQLAlchemy

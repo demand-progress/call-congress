@@ -579,10 +579,8 @@ def stats():
     campaign = request.values.get('campaign', 'default')
     stats = aggregate_stats(campaign)
 
-    total = 0
     reps = {}
-    for (repId,count) in stats['calls']['reps'].items():
-        total += count
+    for (repId, count) in stats['calls']['reps'].items():
         member = data.get_legislator_by_id(repId)
         if member:
             member['name'] = ("%(firstname)s %(lastname)s" % member).decode('utf-8')
@@ -595,7 +593,8 @@ def stats():
         else:
             print "weird", repId
             reps[repId] = repId
-    stats['calls']['total'] = total
+
+    stats['calls']['total'] = stats['total'][0][0]
 
     return render_template('stats.html', stats=stats, reps=reps, updated=datetime.now().isoformat())
 
